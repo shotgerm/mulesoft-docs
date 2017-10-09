@@ -27,14 +27,13 @@ for the Metadata resolution.
 
 Implementing the dynamic key's resolution starts with having a `TypeKeysResolver`:
 
-.EntityKeysResolver.java
 [source,java,linenums]
 ----
-public class EntityKeysResolver implements TypeKeysResolver {
+public class RecordKeysResolver implements TypeKeysResolver {
 
   @Override
   public String getCategoryName() {
-    return "DocEntities";
+    return "Records";
   }
 
   @Override
@@ -74,19 +73,21 @@ Once the resolver is defined we can use it an Operation or Source,
 associating the resolver to a given `MetadataKeyId` Parameter.
 This will be explained in detail in the next section.
 
-OperationWithMetadataKey.java
 [source,java,linenums]
 ----
+  public class OperationWithMetadataKey {
 
-  public void create(@MetadataKeyId(EntityKeysResolver.class) String type){
-      //...
+    public void create(@MetadataKeyId(RecordKeysResolver.class) String type,
+                       @Config MyConfig config){
+        //...
+    }
   }
 ----
 
-SourceWithMetadataKey.java
+
 [source,java,linenums]
 ----
-@MetadataScope(keysResolver = EntityKeysResolver.class)
+@MetadataScope(keysResolver = RecordKeysResolver.class)
 public class DocsMetadataSource extends Source<Map<String, Object>, Void> {
 
     @MetadataKeyId
@@ -110,7 +111,6 @@ that the app developer wants to execute as `MetadataKey`.
 
 In order to declare it, we just annotate a Parameter with `@MetadataKeyId` but don't provide a `TypesKeyResolver`.
 
-OperationWithMetadataKey.java
 [source,java,linenums]
 ----
   public void query(@MetadataKeyId String query){

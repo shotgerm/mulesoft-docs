@@ -13,18 +13,27 @@ An `InputTypeResolver` implementation handles the request for resolving a `Metad
 on the information provided by the `MetadataContext` and most importantly, using the `MetadataKey`
 to identify which is the `MetadataType` required by the app developer.
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 [source, java, linenums]
+=======
+The `InputTypeResolver<T>` interface is parameterized with the generic `T` which has to match the type
+of the `MetadataKeyId` Parameter. For now, you should use type `String` for the generic, since it's the
+most common `MetadataKeyId` type. Later we'll revisit this generic and go in detail of when the type should
+change to something different than `String`.
+
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
 public class InputEntityResolver implements InputTypeResolver<String> {
 
   @Override
   public String getCategoryName() {
-    return "DocEntities";
+    return "Records";
   }
 
   @Override
   public MetadataType getInputMetadata(MetadataContext context, String key)
-      throws MetadataResolvingException, ConnectionException {
+      throws MetadataResolvingException {
 
       final ObjectTypeBuilder objectBuilder = context.getTypeBuilder().objectType();
 
@@ -69,7 +78,7 @@ have to belong to the same `category`, so we can can guarantee that the `Metadat
 public class DemoOperation {
 
   public void create(@Connection MyConnection connection,
-                     @MetadataKeyId(EntityKeysResolver.class) String type,
+                     @MetadataKeyId(RecordKeysResolver.class) String type,
                      @TypeResolver(InputEntityResolver.class) Map<String, Object> entity){
 
     // Code that handles the creation based on the "type" of the "entity"
@@ -89,10 +98,14 @@ the same `MetadataKeyId` to describe two different `MetadataType`, one for each 
 
 For example, we can do an entity merge using the same resolver for two parameters:
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 
 [source, java, linenums]
+=======
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
-  public void merge(@MetadataKeyId(EntityKeysResolver.class) String type,
+  public void merge(@MetadataKeyId(RecordKeysResolver.class) String type,
                     @TypeResolver(InputEntityResolver.class) Map<String, Object> first,
                     @TypeResolver(InputEntityResolver.class) Map<String, Object> second){
 
@@ -111,7 +124,7 @@ again, all belonging to the same `category`:
 
 [source, java, linenums]
 ----
-  public void crete(@MetadataKeyId(EntityKeysResolver.class) String type,
+  public void create(@MetadataKeyId(RecordKeysResolver.class) String type,
                     @TypeResolver(ItemTypeResolver.class) Map<String, Object> item,
                     @TypeResolver(ContainerTypeResolver.class) Map<String, Object> container){
 
@@ -134,22 +147,32 @@ Here is a simplified example of how the `MetadataKeyId` is used without a `TypeK
 and the value configured for that Parameter is used to resolve the input MetadataType
 of the `queryParameters` in the Database Connector:
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 [source, java, linenums]
+=======
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
+public class SelectOperation {
   public List<Map<String, Object>> select(@MetadataKeyId String sql,
                                           @TypeResolver(DbInputMetadataResolver.class) Map<String, Object> queryParameters,
                                           @Config DbConnector connector){
     //...
   }
+}
 ----
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 [source, java, linenums]
+=======
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
 public class DbInputMetadataResolver implements InputTypeResolver<String> {
 
   @Override
   public String getCategoryName() {
-    return "DbCategory";
+    return "Records";
   }
 
   @Override
@@ -172,7 +195,11 @@ public class DbInputMetadataResolver implements InputTypeResolver<String> {
 }
 ----
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 == Resolving dynamic Input Metadata without MetadataKey
+=======
+== Resolving Dynamic Input Metadata without MetadataKey
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 
 Many times we don't have multiple entities whose structure is unknown but just one,
 that has a dynamic MetadataType depending, for example, on the credentials that the app
@@ -182,14 +209,25 @@ properties for the same `Organization` entity.
 In order to declare a `KeyLess` InputMetadata resolution, just skip the `MetadataKeyId` Parameter
 and use the `TypeResolver` without depending on the `MetadataKey`:
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 [source, java, linenums]
+=======
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
   public void createOrg(@TypeResolver(OrganizationTypeResolver.class) Map<String, Object> organization){
     //...
   }
 ----
 
+<<<<<<< HEAD:mule-sdk/v/4.0/output.adoc
 [source, java, linenums]
+=======
+One thing to notice is that the generic of the `InputTypeResolver` is not relevant in the declaration of a
+key-less TypeResolver, thus we can leave it empty and use Object in the `getInputMetadata` declaration:
+
+[source,java,linenums]
+>>>>>>> title :tr::mule-sdk/v/4.0/2.2_input.adoc
 ----
 public class OrganizationTypeResolver implements InputTypeResolver {
 
