@@ -7,7 +7,7 @@ the operation, that contains the id of the type (eg, Account) which will
 be passed to the Metadata Resolver defined for that Parameter.
 
 This means, for example, that if your Operation can save a generic
-record to Amazon S3, but you wish to provide a better design time
+record to a remote system, but you wish to provide a better design time
 experience by describing the supported types `Account` and
 `Organization`, then one of your Operation parameters will be a type
 reference containing either the id `Account` or the id `Organization`,
@@ -21,7 +21,7 @@ The most common case when resolving dynamic Metadata is to have a dynamic
 set of keys that identify each of the possible types to be resolved.
 At design time, the app developer will configure the Connector,
 select an operation and choose one of those keys from the Set that get's
-populated dynamically and the selected key will be come the `MetadataKeyId`
+populated dynamically and the selected key will become the `MetadataKeyId`
 for the Metadata resolution.
 
 
@@ -57,19 +57,19 @@ public class RecordKeysResolver implements TypeKeysResolver {
 }
 ----
 
-Here we can see all the elements required to create a dynamic Set of
-MetadataKeys. The method to implement is `getKeys`, being it's output
-all the keys that will be available for the user.
+Here you can see all the elements required to create a dynamic Set of
+MetadataKeys. The method to implement is `getKeys`, and its output
+all the keys that will be available to the user.
 
 The `id` element, like `Author_id` will be used internally and has to
 be unique for each structure you may want to represent across all the
 resolvers. On the other hand, the `displayName` is the name that
 will be shown to the user for that key, so it is expected to be more
-human friendly.
+human-friendly.
 
 image::metadata/keys_single_drop.png[MetadataKeys Single Level Dropdown]
 
-Once the resolver is defined we can use it an Operation or Source,
+Once the resolver is defined, you can use it an Operation or Source,
 associating the resolver to a given `MetadataKeyId` Parameter.
 This will be explained in detail in the next section.
 
@@ -109,7 +109,7 @@ we are talking about a user-defined `MetadataKey`.
 For example, this is a very common case in queries, where we use the whole query
 that the app developer wants to execute as `MetadataKey`.
 
-In order to declare it, we just annotate a Parameter with `@MetadataKeyId` but don't provide a `TypesKeyResolver`.
+In order to declare it, just annotate a Parameter with `@MetadataKeyId` but don't provide a `TypesKeyResolver`.
 
 [source,java,linenums]
 ----

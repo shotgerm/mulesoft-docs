@@ -91,12 +91,12 @@ public class FetchOperations {
 }
 ----
 
-Here we see that the MetadataType for the output is resolve dynamically based on the `entityKind`
-that is being fetch, so if the `entityKind` is configured with the `Author_id` key provided by our
+Here we see that the MetadataType for the output is resolved dynamically based on the `entityKind`
+that is being fetched, so if the `entityKind` is configured with the `Author_id` key provided by our
 `EntityKeysResolver`, then the `OutputEntityResolver` will be invoked with that `MetadataKey` and
 the output for the `get` operation will be resolved to an `AuthorResult` ObjectType.
 
-Source can use the same Output type resolution for describing the MetadataType of the object being
+A Source can use the same Output type resolution for describing the MetadataType of the object being
 dispatched to the flow, and its declaration is very similar:
 
 [source,java,linenums]
@@ -125,8 +125,8 @@ public class ListenerSource extends Source<Map<String, Object>, Void>  {
 }
 ----
 
-Both Sources and Operations have the same lifecycle for resolving the Output type,
-first we configure the `MetadataKeyId` and then the `OutputTypeResolver` is invoked with that key in order
+Both Sources and Operations have the same lifecycle for resolving the Output type.
+First step is to configure the `MetadataKeyId`, and then the `OutputTypeResolver` is invoked with that key in order
 to resolve the resulting entity MetadataType.
 
 === Adding DataSense for the Result Attributes
@@ -190,12 +190,12 @@ public class ListenerSource extends Source<Map<String, Object>, Object>  {
 
 == Output Metadata with User defined MetadataKey
 
-The case for user-defined MetadataKeys apply also for the Output of a Component.
+The case for user-defined MetadataKeys also applies for the Output of a Component.
 Looking back to the case of a query, we don't have a pre-defined set of possible MetadataKeys,
 but instead have a Parameter whose value characterizes the Output type or structure.
 
-For example, in our Database Connector we have the `select` operation, whose output of course depends
-on what's being queried:
+For example, in our Database Connector we have the `select` operation,
+whose output depends on what entities are being queried:
 
 [source,java,linenums]
 ----
@@ -257,7 +257,7 @@ but in the `SelectMetadataResolver` we are not describing an ArrayType in the `g
 method, but instead the MetadataType returned represents a single `record` structure. +
 Why is that?
 
-Well, since we already know the Operation is returning an ArrayType (List, PagingProvider, etc),
+Well, since we already know the Operation is returning an ArrayType (List, PagingProvider, etc.),
 you as a developer only have to describe the `generic` type of the array. The Output and Attributes
 TypeResolvers always resolve the MetadataType of _the elements of
 the collection_ and not the _collection_ type itself.
@@ -269,12 +269,11 @@ the collection, and _not_ the attributes of the Operation's `List` output.
 == Resolving dynamic Output Metadata without MetadataKey
 
 Just as we saw for the Input, the Output of an operation can be resolved
-without an specific `MetadataKey`, being the dynamic type affected by the Configuration or Connection
+without a specific `MetadataKey`, being the dynamic type affected by the Configuration or Connection
 of the Component. +
 Again, in order to declare a keyless resolver we just skip the `MetadataKeyId` Parameter
 and ignore the MetadataKey in the TypeResolvers:
 
-OrganizationTypeResolver.java
 [source,java,linenums]
 ----
 public class UserTypeResolver implements OutputTypeResolver, AttributesTypeResolver  {
@@ -317,7 +316,6 @@ public class UserTypeResolver implements OutputTypeResolver, AttributesTypeResol
 }
 ----
 
-.UserOperations.java
 [source,java,linenums]
 ----
 public class UserOperations {

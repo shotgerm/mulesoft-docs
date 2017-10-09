@@ -63,14 +63,14 @@ public class InputEntityResolver implements InputTypeResolver<String> {
 In the example above, we are using the `MetadataContext` only to obtain the `typeBuilder`,
 but we could also use the provided Configuration and Connection elements.
 For example, we could fetch the Metadata from an external service using the Connection,
-or access an static resource present in the Configuration like an schema.
+or access a static resource present in the Configuration like a schema.
 
 == Using the InputTypeResolver
 
 Now that we have a `TypesKeysResolver` and an `InputTypeResolver` we can add input
 DataSense support on our Operations and Sources.
 The main restriction to use an `InputTypeResolver` along with a given `TypesKeysResolver` is that both
-have to belong to the same `category`, so we can can guarantee that the `MetadataKey` provided by the
+have to belong to the same `category`, so we can guarantee that the `MetadataKey` provided by the
 `TypesKeysResolver` can be resolved to a `MetadataType` by the `InputTypeResolver`:
 
 [source,java,linenums]
@@ -92,7 +92,7 @@ public class DemoOperation {
 }
 ----
 
-Each Parameter can have its own `TypeResolver` each using any `InputEntityResolver`. This means that
+Each Parameter can have its own `TypeResolver` each using any `InputEntityResolver`, meaning that
 both can have the same resolver thus describing the same MetadataType for the two parameters, or using
 the same `MetadataKeyId` to describe two different `MetadataType`, one for each Parameter.
 
@@ -139,7 +139,7 @@ again, all belonging to the same `category`:
 
 == Input Metadata with User defined MetadataKey
 
-In the previous section we saw that when the `MetadataKeyId` parameter doesn't declare a
+In the previous section, we saw that when the `MetadataKeyId` parameter doesn't declare a
 `TypeKeysResolver`, then any key can be defined by the app developer when configuring the
 Operation.
 

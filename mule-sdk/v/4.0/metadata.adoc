@@ -86,9 +86,9 @@ We'll see later that in order to resolve Dynamic Metadata, the element has to be
 Implementing Dynamic DataSense support starts with defining what type of
 Metadata we want to provide and for which element. Once that is defined
 we'll make use of a combination of annotations and custom implementations
-of different Metadata resolvers (ie: `@MetadataKeyId(BucketKeysResolver.class)`),
+of different Metadata resolvers (i.e.: `@MetadataKeyId(BucketKeysResolver.class)`),
 depending on the desired use case.
-In the next sections you'll find detailed explanation of how to implement
+In the next sections, you'll find a detailed explanation of how to implement
 each of the cases described above and their combinations.
 >>>>>>> title :tr::mule-sdk/v/4.0/2.0_metadata_intro.adoc
 
