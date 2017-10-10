@@ -11,7 +11,7 @@ DataSense from an end-user’s perspective.
 //TODO link to Connectors and DataSense doc
 ====
 
-== What's the Metadata of a Component?
+== What is the Metadata of a Component?
 
 Integration developers often spend great amounts of time simply trying to determine the input and output
 types for a given Component (Operation, Sources, etc.) so they can transform the data in hand to connect one
@@ -61,7 +61,7 @@ For example, a `void` Operation will have Static Metadata indicating that the ou
 while a different Operation that fetches a `User` profile from a remote service can describe dynamically what the structure
 of the User type is. +
 
-In the <<_structure, Structure>> section we saw that an Operation can output a Result, which contains data for the Payload
+In the <<sdk_concepts#, Structure>> section we saw that an Operation can output a Result, which contains data for the Payload
 and the Attributes of the resulting Message. Luckily for us, we are able to describe the Metadata for both of them
 independently, thus providing a greatly enriched experience for the app developer. Structure of the Attributes is as
 important as the structure of the Payload, but since not all Components produce Attributes, the dynamic Metadata for them
@@ -71,16 +71,6 @@ You'll find that certain return types are forced to describe their Metadata dyna
 consistency, since we have to always think in providing the best experience possible for the app developer, and too generic
 types are enemies of that.
 
-<<<<<<< HEAD:mule-sdk/v/4.0/metadata.adoc
-=== Static Metadata
-We’ll use Static Metadata to reference the Metadata that is known at compile time and available from the types in the connector’s jar. Simple java types are part of this static Metadata, as well as custom POJOs defined by the developer in its model. The relevant part is that the structure is well known or can be introspected, without having a dynamic key or a custom resolver.
-
-=== Dynamic Metadata
-Dynamic Metadata names the Metadata of a type with an unknown structure at compile time, that has to be resolved based on the configuration of the Connector at design time. +
-This has different usages, going from cases where the type itself is known but its structure depends on the service configuration (eg, the system has an Account with fields that can be customized by the user, so its structure has to be discovered each time based on the user’s credentials), all the way to cases where everything is dynamic and the structure described heavily depends on the configured Parameters (eg, the structure described is the payload of a Service operation which also depends on the definition of the Service based on the user sandbox).
-
-We'll see later that in order to resolve Dynamic Metadata, the element has to be associated with a Metadata Resolver that knows how to obtain the desired type structure based on the current Component configuration.
-=======
 === Implementation Overview
 
 Implementing Dynamic DataSense support starts with defining what type of
@@ -90,7 +80,6 @@ of different Metadata resolvers (i.e.: `@MetadataKeyId(BucketKeysResolver.class)
 depending on the desired use case.
 In the next sections, you'll find a detailed explanation of how to implement
 each of the cases described above and their combinations.
->>>>>>> title :tr::mule-sdk/v/4.0/2.0_metadata_intro.adoc
 
 ==== Metadata Keys Parameter
 
