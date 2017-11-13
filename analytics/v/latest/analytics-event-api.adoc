@@ -116,6 +116,11 @@ Example output for this command is:
   ...
 ----
 
+=== Support for Environments
+
+For organizations that have enabled environments, API events queried using the above approach will belong exclusively to the *"Unclassified" environment*. To request events for APIs in a specific environment, select it in the *environment selector* and create the report that you would like to run. Note that reports are stored per-environment so different reports will be exist in different environments. Copy the report URL from the UI, and note that in addition to the Organization ID, the URL also includes "/environment/{Environment ID}".
+The addition of the Environment ID to the report URL is all that is needed to access events in the specified environment. Note that API IDs are different in different environments: An API's ID in *QA* will be different from its ID in *Production*, for example.
+
 === Command Options
 
 The following options can be added to the *curl* command:
