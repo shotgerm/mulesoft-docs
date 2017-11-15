@@ -321,7 +321,6 @@ The following table lists third-party software in Mule sorted by the software co
 |scala-reflect |2.11.4 |BSD-3-Clause, No Source License
 |scala-xml_2.11 |1.0.2 |BSD-3-Clause, No Source License
 |scalajs-library_2.11 |0.6.5 |BSD-3-Clause, No Source License
-|serializer |2.7.1 |Apache-2.0
 |servo-core |0.7.5 |Apache-2.0, Public Domain
 |shapeless_2.11 |2.1.0 |Apache-2.0
 |shapeless_sjs0.6_2.11 |2.1.0-2 |Apache-2.0
@@ -369,10 +368,7 @@ The following table lists third-party software in Mule sorted by the software co
 |woodstox-core-asl |4.4.1 |Apache-2.0
 |wsdl4j |1.6.3 |CPL-1.0, No Source License
 |wss4j |1.6.18 |Apache-2.0
-|xalan |2.7.2 |Apache-2.0, W3C
 |xapool |1.5.0 |Not Declared, LGPL-2.1+
-|xercesImpl |2.9.1 |Apache-2.0, No Sources
-|xml-apis |1.3.04 |Apache-2.0, Public Domain, W3C
 |xml-resolver |1.2 |Apache-2.0
 |xmlbeans |2.3.0 |Apache-2.0, No Sources
 |xmlpull |1.1.3.1 |Public Domain, No Sources
@@ -600,7 +596,6 @@ The following table lists third-party software in Mule sorted by the license.
 |Apache-2.0 |rome |0.9
 |Apache-2.0 |Saxon-HE |9.6.0-7
 |Apache-2.0 |Saxon-HE, jar, xqj |9.6.0-7
-|Apache-2.0 |serializer |2.7.1
 |Apache-2.0 |servo-core |0.7.5
 |Apache-2.0 |shapeless_2.11 |2.1.0
 |Apache-2.0 |shapeless_sjs0.6_2.11 |2.1.0-2
@@ -636,9 +631,6 @@ The following table lists third-party software in Mule sorted by the license.
 |Apache-2.0 |woodstox-core |5.0.1
 |Apache-2.0 |woodstox-core-asl |4.4.1
 |Apache-2.0 |wss4j |1.6.18
-|Apache-2.0 |xalan |2.7.2
-|Apache-2.0 |xercesImpl |2.9.1
-|Apache-2.0 |xml-apis |1.3.04
 |Apache-2.0 |xml-resolver |1.2
 |Apache-2.0 |xmlbeans |2.3.0
 |Apache-2.0 |xmlschema-core |2.1.0
@@ -918,7 +910,6 @@ The following table lists third-party software in Mule sorted by the license.
 |No Sources |jasper-el |6.0.44
 |No Sources |jsp-api |6.0.44
 |No Sources |juli |6.0.44
-|No Sources |xercesImpl |2.9.1
 |No Sources |xmlbeans |2.3.0
 |No Sources |xmlpull |1.1.3.1
 |Non-Standard |jackson-core-asl |1.9.11
@@ -953,7 +944,6 @@ The following table lists third-party software in Mule sorted by the license.
 |Public Domain |msv-core |2011.1
 |Public Domain |scala-library |2.11.7
 |Public Domain |servo-core |0.7.5
-|Public Domain |xml-apis |1.3.04
 |Public Domain |xmlpull |1.1.3.1
 |SMLNJ |jython-standalone |2.7.0
 |Sun-IP |jaxb-api |2.1
@@ -962,8 +952,6 @@ The following table lists third-party software in Mule sorted by the license.
 |W3C |cxf-api |2.7.15
 |W3C |cxf-rt-ws-policy |2.7.15
 |W3C |openws |1.5.4
-|W3C |xalan |2.7.2
-|W3C |xml-apis |1.3.04
 |W3C |xmlsec |1.5.8
 |W3C |xmltooling |1.4.4
 |WernerRandelshofer |jaxb-api |2.1
