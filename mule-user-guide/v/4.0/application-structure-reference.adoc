@@ -1,5 +1,7 @@
 = Application Structure Reference
 
+When developing a Mule Application, your project has a folder structure that changes after being packaged into a deployable application.
+
 src/main is the root folder for all the productive source code of the application.
 
 .Structure for sub folders under src/main.
@@ -42,7 +44,6 @@ src/test is the root folder for all the test source code of the application.
 | It contains the MUnit source code. +
 It can contain nested folders in the way of packages.
 | source
-
 |===
 
 == See Also

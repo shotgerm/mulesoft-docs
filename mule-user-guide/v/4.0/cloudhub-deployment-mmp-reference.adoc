@@ -1,0 +1,35 @@
+= CloudHub Deployment Reference (Mule Maven Plugin)
+
+[%header,cols="30,70"]
+|===
+|Parameter | Description
+|cloudHubDeployment | Top Level Element.
+| uri | Your Anypoint Platform URI. +
+If not set, by default this value is set to +https://anypoint.mulesoft.com+.
+| muleVersion | The Mule runtime version that will run in your CloudHub instance. +
+You need to ensure that this value is at equal or higher than the minimum required runtime version of your application.
+| username | Your CloudHub username.
+| password | Your CloudHub password.
+| applicationName | The name of your application in CloudHub. +
+This name is part of the domain of your deployed app. For example, naming your application application-1 makes your app's public domain +application-1.cloudhub.io+.
+| environment | The CloudHub environment to which you want to deploy.
+| properties | Top level element. +
+If you need to set properties for your Mule application being deployed, you can use the <properties> top level element:
+
+<properties> +
+  <key>value</key> +
+</properites>
+
+
+For example:
+
+<properties> +
+  <http.port>8081</http.port> +
+</properites>
+
+|===
+
+== See Also
+
+* link:/mule-user-guide/v/4.0/mmp-deployment-concept[About Deploying a Mule Application (Mule Maven Plugin)]
+* link:/mule-user-guide/v/4.0/deploy-mule-application-mmp-task[To Deploy a Mule Application to CloudHub (Mule Maven Plugin)]
