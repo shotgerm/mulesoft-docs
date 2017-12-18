@@ -10,7 +10,6 @@
   <configuration>
     <standaloneDeployment>
   	    <muleHome>${mule.home.test}</muleHome>
-  	    <deploymentTimeout>120000</deploymentTimeout>
   	</standaloneDeployment>
   </configuration>
 
