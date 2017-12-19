@@ -73,6 +73,7 @@
 ** link:/mule-user-guide/v/4.0/mmp-concept[About the Mule Maven Plugin]
 *** link:/mule-user-guide/v/4.0/add-mmp-task[To Add the Mule Maven Plugin to a Project]
 *** link:/mule-user-guide/v/4.0/packager-concept[About the Mule Packager Tool]
+**** link:/mule-user-guide/v/4.0/package-task-mmp[To Package a Mule Application (Mule Maven Plugin)]
 **** link:/mule-user-guide/v/4.0/application-structure-reference[Application Structure Reference]
 **** link:/mule-user-guide/v/4.0/package-structure-reference[Package Structure Reference]
 

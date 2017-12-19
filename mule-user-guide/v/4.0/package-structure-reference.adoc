@@ -5,33 +5,30 @@
 |Folder |Description
 
 | classes
-| This folder contains the
+| This folder contains the configuration files of your mule applications.
 
 | maven-status
 |
+//_TODO: Purpose of this directory
 
 | META-INF
-|
+| This is an internal directory for your application used by the runtime and other related services to run your application. +
+You should not include files directly into this directory.
 
 | repository
 | This folder follows the structure of a Maven repository with all the necessary application's dependencies.
 
 | test-classes
-|
+| This folder contains the configuration files of your application's test.
 
-|test-mule
-|
+| test-mule
+| This folder contains the configuration files of your MUnit tests.
 
 |===
 
-
-[NOTE]
---
-In the META-INF/mule-src/ folder, you can find a copy of the Application Structure
---
 
 
 == See Also
 
 * link:/mule-user-guide/v/4.0/application-structure-reference[Application Structure Reference]
-* link:/mule-user-guide/v/4.0/package-structure-reference[About the Mule Packager Tool]
+* link:/mule-user-guide/v/4.0/packager-concept[About the Mule Packager Tool]
