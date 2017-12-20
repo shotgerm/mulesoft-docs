@@ -1,13 +1,13 @@
 = To Add the Mule Maven Plugin to a Project
 
-To add the Mule Maven Plugin you need to add it's maven dependency to the project:
+To add the Mule Maven Plugin you need to add its maven dependency to the project:
 
 [source,xml,linenums]
 ----
 <plugin>
   <groupId>org.mule.tools.maven</groupId>
   <artifactId>mule-maven-plugin</artifactId>
-  <version>2.0</version>
+  <version>3.0.0</version>
   <extensions>true</extensions> //<1>
 </plugin>
 ----
