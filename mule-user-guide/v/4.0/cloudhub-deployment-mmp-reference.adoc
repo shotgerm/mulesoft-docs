@@ -32,4 +32,4 @@ For example:
 == See Also
 
 * link:/mule-user-guide/v/4.0/mmp-deployment-concept[About Deploying a Mule Application (Mule Maven Plugin)]
-* link:/mule-user-guide/v/4.0/deploy-mule-application-mmp-task[To Deploy a Mule Application to CloudHub (Mule Maven Plugin)]
+* link:/mule-user-guide/v/4.0/ch-deploy-mule-application-mmp-task[To Deploy a Mule Application to CloudHub (Mule Maven Plugin)]
