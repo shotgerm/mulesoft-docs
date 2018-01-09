@@ -567,7 +567,7 @@ TODO, TODO
 
 Format: `multipart/form-data`
 
-This format refers to an HTTP message with multiple parts separated by boundaries that can be named. These parts can include attachments. You can use a DataWeave script to extract and transform data any of the parts using the `parts` selector. For example, you might retrieve data from the HTTP header and an attachment.
+This format refers to an HTTP message with multiple parts separated by boundaries that can be named. These parts can include attachments. You can use a DataWeave script to extract and transform data from any of the parts selecting the `parts` element. For example, you might retrieve data from the HTTP header and an attachment.
 
 .Sample HTTP Message with Extracted Form Data
 image::postman-multipart.png[Multipart Example]
