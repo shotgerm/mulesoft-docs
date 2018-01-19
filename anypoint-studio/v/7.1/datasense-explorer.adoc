@@ -1,7 +1,9 @@
 = About DataSense Explorer
 :keywords: anypoint studio, datasense, metadata, meta data, query metadata, dsql, data sense query language
 
-The DataSense Explorer is a feature in Studio that allows you to preview the Message data structure at different points of the flow, while still in design time. Select a specific element in the flow, then click the DataSense Explorer icon and explore the structure of the data that enters and leaves it.
+The DataSense Explorer is a feature in Studio that allows you to preview the Message data structure at different points of the flow, while still in design time.
+
+Select a specific element in the flow, then click the DataSense Explorer icon and explore the structure of the data that enters and leaves it.
 
 image:datasense+logo.png[datasense+logo]
 
