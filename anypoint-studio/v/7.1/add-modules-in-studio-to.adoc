@@ -1,0 +1,21 @@
+= To Add Modules to Your Studio Project
+
+You can add Modules and Connectors to your Mule project using the Mule Palette.
+
+. Go to your Mule Palette, and click the Search in Exchange... option.
++
+By default, this list shows the available public modules. If you configured your Anypoint Platform credentials in Studio, you can also see your organization's private modules. +
+If you have no credentials configured in Studio, you can click Add Account to access your organization's modules.
+. Select your desired modules from the Available Modules list to the left by clicking Add >.
+. Click Finish.
+
+The selected module is now part of your Mule Palette.
+
+Additionally, you can also select the Add Modules option, and drag and drop your desired module from the featured list.
+
+Modules are dependencies of your Mule project. Adding a module to a Mule project in Studio does not make that module available to other projects in your Studio workspace. +
+
+== See Also
+
+* link:/anypoint-studio/v/7.1/set-credentials-in-studio-to[To Set Credentials in Studio]
+* link:/anypoint-studio/v/7.1/mule-palette-concept[About the Mule Palette]
