@@ -1,9 +1,9 @@
 = Runtime Manager Agent 2.1.0 Release Notes
 
 
-*January 15, 2018*
+*January 22, 2018*
 
-Download Runtime Manager Agent, version 1.9.3 at the following URL:
+Download Runtime Manager Agent, version 2.1.0 at the following URL:
 
 https://support.mulesoft.com/s/downloads
 
@@ -24,15 +24,12 @@ No change.
 
 == Improvements
 
-* Add runtime version and agent version to response of the endpoint to retrieve information about the agent and the runtime.
-* Upgrade amc_debug script  to exclude HEAP by default and include network check.
-* Support for Schedule Management on Clusters and Server Groups
+TBD
 
 
 == Fixed Issues
 
-* Upgrade BouncyCastle library to 1.59 to fix vulnerability (CVE-2017-13098)
-* Fix bug in scheduling management where not all schedulers where being reported when the agent had schedulers configured.
+TBD
 
 
 == Known Issues
