@@ -11,9 +11,8 @@ https://support.mulesoft.com/s/downloads
 
 [%header,cols="2*a",width=70%]
 |===
-|Software|Version
-|Mule Runtime|3.6.x, 3.7.x, 3.8.x, 3.9.x
-|API Gateway|2.x and above
+|Component|Version
+|Mule Runtime| 4.1.0
 |Runtime Manager | V2.0
 |===
 
