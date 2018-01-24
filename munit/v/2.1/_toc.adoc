@@ -21,6 +21,7 @@
 *** link:/munit/v/2.1/munit-maven-plugin[To Operate the MUnit Maven Plugin]
 *** link:/munit/v/2.1/faq-how-to-read-munit-test-results[FAQ: How To Read MUnit Test Results]
 *** link:/munit/v/2.1/munit-maven-plugin-configuration[MUnit Maven Plugin Configuration Reference]
+** link:/munit/v/2.1/munit-domain-support[About MUnit Support for Domain Based Applications]
 ** link:/munit/v/2.1/munit-coverage-report[About Coverage Report]
 *** link:/munit/v/2.1/faq-how-munit-coverage[FAQ: How Does MUnit Calculate Coverage]
 *** link:/munit/v/2.1/coverage-maven-concept[About Coverage in Maven]
