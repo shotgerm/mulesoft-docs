@@ -3,7 +3,7 @@
 MUnit allows you to test applications that run referencing a Mule Domain. +
 MUnit support for domain based applications is designed to require the minimum change of code from your end to implement it. However if your Mule Application depends on a Mule Domain, there are a few considerations to take into account:
 
-* When working in Anypoint Studio your Mule Domain must always be part of your workspace.
+* When working in Anypoint Studio, your Mule Domain must always be part of your workspace.
 * Your Folder must have the same name as your artifact. +
 Regardless if it's a Mule application or a Mule domain if, the folder in your workspace containing your Mule project must have the same name as the artifact ID defined in your pom file.
 +
