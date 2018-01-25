@@ -5,7 +5,7 @@
 |Parameter | Description
 |standaloneDeployment | Top Level Element.
 | muleVersion | The Mule runtime version running in your local machine instance.
-|deploymentTimeout| The allowed elapsed time between the start of the deployment process and the confirmation that the artifact has been deployed.
+|deploymentTimeout| The allowed elapsed time (in ms) between the start of the deployment process and the confirmation that the artifact has been deployed.
 | muleHome | The localtion of the Mule Runtime instance in your local machine.
 |===
 
