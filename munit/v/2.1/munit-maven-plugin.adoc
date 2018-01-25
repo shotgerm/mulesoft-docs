@@ -1,6 +1,6 @@
 = To Operate the MUnit Maven Plugin
 
-This section is dedicated to show how to run your tests using the plugin.
+This section is dedicated to showing you how to run your tests using the plugin.
 
 == To Run MUnit Tests for a Mule Application (MUnit Maven Plugin)
 
@@ -107,7 +107,7 @@ If your application is a multi-module application:
 mvn clean install -Dmunit.test=<regex-test-suite>#<regex-test-name>
 ----
 
-The addition is the special character `#`. To the right of it you should type the test name. It also accepts regular expressions. The expression is applied to the attribute `name` of the MUnit Test.
+The addition is the special character `#`. To the right of it, you should type the test name. It also accepts regular expressions. The expression is applied to the attribute `name` of the MUnit Test.
 
 The following is a valid example:
 [source,console]
