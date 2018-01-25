@@ -54,6 +54,7 @@
 **** link:/mule-user-guide/v/4.0/transform-to-change-target-output-design-center[To Output a Transformation to an Attribute or Variable]
 **** link:/mule-user-guide/v/4.0/transform-dataweave-xml-reference[Transform Message Component XML Reference]
 *** link:/mule-user-guide/v/4.0/try-scope-concept[About Try Scope]
+*** link:/mule-user-guide/v/4.0/on-error-scope-concept[About On-Error Scopes]
 **** link:/mule-user-guide/v/4.0/try-scope-xml-reference[Try Scope XML Reference]
 *** link:/mule-user-guide/v/4.0/until-successful-scope[About Until Successful]
 +
@@ -66,6 +67,7 @@
 *** link:/mule-user-guide/v/4.0/streaming-about[About Streaming]
 **** link:/mule-user-guide/v/4.0/streaming-strategies-reference[Streaming Strategies Reference]
 *** link:/mule-user-guide/v/4.0/error-handling[About Error Handling]
+**** link:/mule-user-guide/v/4.0/mule-error-concept[About the Mule Error]
 *** link:/mule-user-guide/v/4.0/configuring-properties[About Property Placeholders]
 **** link:/mule-user-guide/v/4.0/mule-app-properties-to-configure[To Create Property Placeholders for Mule Apps]
 **** link:/mule-user-guide/v/4.0/mule-app-properties-system[Working with System Properties]
