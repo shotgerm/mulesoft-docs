@@ -6,6 +6,7 @@
 *** link:/anypoint-exchange/workflow-sharing-assets[Workflow: Sharing Assets]
 *** link:/anypoint-exchange/to-create-an-asset[To Create an Asset]
 *** link:/anypoint-exchange/to-describe-an-asset[To Describe an Asset]
+*** link:/anypoint-exchange/to-simulate-api-task[To Simulate Calling an API (Mocking)]
 *** link:/anypoint-exchange/to-download-an-asset[To Download an Asset]
 *** link:/anypoint-exchange/to-delete-asset[To Delete an Asset]
 *** link:/anypoint-exchange/to-publish-an-asset[To Publish Asset Draft Content]

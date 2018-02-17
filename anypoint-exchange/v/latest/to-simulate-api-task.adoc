@@ -1,0 +1,47 @@
+= To Simulate Calling a RAML API (Mocking)
+
+link:/getting-started/api-lifecycle-overview#which-version[_Requires November 2017 Release_]
+
+Simulating calls to an API is a critical design task that helps you troubleshoot problems and demo the API to prospective users even before you have implemented it. You can simulate calls to a RAML-backed API after publication to Exchange as described in this procedure. You can also simulate calls to the API in Design Center before publication. To simulate calls to the API, the API definition needs to include the following properties:
+
+* An example of data the actual implementation would return 
+* An HTTP status code the API returns if successful
+
+The mocking service, which you can enable in Exchange, can provide a base URI for an API you haven't implemented yet. The mocking service reacts to http requests by returning responses based on your RAML design. 
+
+This procedure builds on the Placeholder API example described in Design Center topics. The steps to simulate calls to the API in Exchange after publication and in Design Center before publication are similar. 
+
+In this procedure, when you successfully call the API, the mocking service returns the status code 200 and example data as coded in RAML. 
+
+. Click an asset in Exchange to open it.
+. Select Mocking Service to simulate calls to the API.
++
+image::ex2-select-mocking-service.png[height=461,width=432]
++
+The mocking service URI appears. for example:
+----
+https://mocksvc-proxy.anypoint.mulesoft.com/exchange/9c4a462a-xxxx-xxxx-b245-3072a84c871f/myproject/1.0.0/users
+----
+. In API Summary, click GET for the /users resource. 
++
+image::ex2-api-summary.png[height=409, width=184]
++
+Try It appears.
++
+. Click Send to request the example data.
++
+The example data appears for the `/users` resource.
++
+image::ex2-mock-response.png[height=530, width=448]
++
+. Expand the `/userbyid` resource, and click GET for the `/userbyid` resource. 
+. In Parameters, check Show Optional Parameters, and accept the default query parameter ID = 3. 
+. Click Send.
++
+The example data appears for `/userbyid` resource for the user having an ID 3.
+
+== See Also
+
+* link://design-center/v/1.0/mocking-reference[Simulating Calls to the API (Mocking) Reference]
+* link:/design-center/v/1.0/mocking-reference[Simulating Calls to the API (Mocking) Reference]
+* link:/design-center/v/1.0/publish-and-test-v-task[To Simulate Calling the API (Mocking) in Visual Mode]
