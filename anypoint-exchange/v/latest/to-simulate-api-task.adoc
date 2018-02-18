@@ -16,32 +16,32 @@ In this procedure, when you successfully call the API, the mocking service retur
 . Click an asset in Exchange to open it.
 . Select Mocking Service to simulate calls to the API.
 +
-image::ex2-select-mocking-service.png[height=461,width=432]
+image::ex2-select-mocking-service.png[height=330,width=311]
 +
 The mocking service URI appears. for example:
++
 ----
 https://mocksvc-proxy.anypoint.mulesoft.com/exchange/9c4a462a-xxxx-xxxx-b245-3072a84c871f/myproject/1.0.0/users
 ----
++
 . In API Summary, click GET for the /users resource. 
 +
-image::ex2-api-summary.png[height=409, width=184]
-+
-Try It appears.
+image::ex2-api-summary.png[height=292, width=132]
 +
 . Click Send to request the example data.
 +
 The example data appears for the `/users` resource.
 +
-image::ex2-mock-response.png[height=530, width=448]
+image::ex2-mock-response.png[height=379, width=320]
 +
 . Expand the `/userbyid` resource, and click GET for the `/userbyid` resource. 
 . In Parameters, check Show Optional Parameters, and accept the default query parameter ID = 3. 
 . Click Send.
 +
-The example data appears for `/userbyid` resource for the user having an ID 3.
+The example data appears for the user having an ID of 3.
 
 == See Also
 
 * link://design-center/v/1.0/mocking-reference[Simulating Calls to the API (Mocking) Reference]
-* link:/design-center/v/1.0/mocking-reference[Simulating Calls to the API (Mocking) Reference]
+* link:/design-center/v/1.0//design-center/v/1.0/design-raml-api-task[To Design a RAML API Specification (Code View)]
 * link:/design-center/v/1.0/publish-and-test-v-task[To Simulate Calling the API (Mocking) in Visual Mode]

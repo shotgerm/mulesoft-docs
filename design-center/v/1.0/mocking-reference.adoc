@@ -36,7 +36,7 @@ Otherwise, you can simulate a call to the API using the mocking service. You tur
 
 image::mocking-service.png[Files, RAML Editor, RAML Documentation,height=218,width=180]
 
-The mocking service, the mocking service creates a basic implementation of your API and exposes a real service based on it. The mocking service modifies the baseUri in the RAML. The mocking service reacts to HTTP requests by returning responses based on your RAML design.
+The mocking service creates a basic implementation of your API and exposes a real service based on it. The mocking service modifies the baseUri in the RAML. The mocking service reacts to HTTP requests by returning responses based on your RAML design.
 
 ----
 #%RAML 1.0
