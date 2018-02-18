@@ -7,11 +7,9 @@ Simulating calls to an API is a critical design task that helps you troubleshoot
 * An example of data the actual implementation would return 
 * An HTTP status code the API returns if successful
 
-The mocking service, which you can enable in Exchange, can provide a base URI for an API you haven't implemented yet. The mocking service reacts to http requests by returning responses based on your RAML design. 
+The mocking service can provide a base URI for an API you haven't implemented yet. The mocking service reacts to HTTP requests by returning responses based on your RAML design. 
 
-This procedure builds on the Placeholder API example described in Design Center topics. The steps to simulate calls to the API in Exchange after publication and in Design Center before publication are similar. 
-
-In this procedure, when you successfully call the API, the mocking service returns the status code 200 and example data as coded in RAML. 
+This procedure builds on the Placeholder API example described in Design Center topics. Steps are similar to simulate calls to the API in Exchange and Design Center. When you successfully call the API, the mocking service returns the status code 200 and example data as coded in RAML. 
 
 . Click an asset in Exchange to open it.
 . Select Mocking Service to simulate calls to the API.
