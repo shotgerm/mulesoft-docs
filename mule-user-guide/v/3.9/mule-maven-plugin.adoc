@@ -153,6 +153,11 @@ To deploy your application to CloudHub:
         <password>myPassword</password>
         <redeploy>true</redeploy>
         <environment>Production</environment>
+        <properties> 
+          <!-- All propertied that users define in mule-app.properties as maven won't load properties file -->
+          <anypoint.platform.client_id>client id</anypoint.platform.client_id> 
+          <anypoint.platform.client_secret>client secret</anypoint.platform.client_secret> 
+        </properties> 
     </configuration>
     <executions>
         <execution>
