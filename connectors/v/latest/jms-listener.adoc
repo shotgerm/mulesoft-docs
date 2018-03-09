@@ -13,14 +13,15 @@ The syntax to listen for new messages from a Queue is:
 <jms:listener config-ref="config" destination="#[vars.destination]"/>
 ----
 
-The operation above will listen for new messages in the Queue identified by the destination, returning a `MuleMessage` each time a JMS Message is available in the Queue.
+The source above will listen for new messages in the Queue identified by the destination, returning a `MuleMessage` each time a JMS Message is available in the Queue.
 
 The _MuleMessage_ will have:
+
 * The message's content as payload.
 * The message's metadata in the message attributes.
 
 By default, the Message consumed will be ACKed only when the execution of the flow receiving the message completes successfully. 
-If instead an error occurs during the execution of the flow, the Session will be recovered and the Message will be redelivered.
+If instead, an error occurs during the execution of the flow, the Session will be recovered and the Message will be redelivered.
 
 For more information regarding a Message ACK, check the link:jms-ack[How To Handle Message Acknowledgement].
 

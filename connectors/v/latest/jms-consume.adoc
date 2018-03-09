@@ -13,12 +13,12 @@ The syntax to consume a message from a Queue is:
 <jms:consume config-ref="JMS_config" destination="#[vars.destination]"/>
 ----
 
-The operation above consumes the first available message in the Queue identified by the destination, returning a `MuleMessage` with the following attributes:
+The operation above consumes the first available message in the Queue identified by the destination, and then converts it to a `MuleMessage` resulting in the following structure:
 
 * The message's content as payload.
 * The message's metadata in the message attributes.
 
-Once consumed, the Message will be immediately ACKed by default. If you want to control the ACK of the Message after some processing, then `ackMode` should be set to `MANUAL`
+Once received, the Message will be immediately ACKed by default. If you want to control the ACK of the Message after some processing, then `ackMode` should be set to `MANUAL`
 For more information regarding a Message ACK, check the link:jms-ack[How To Handle Message Acknowledgement].
 
 == Waiting for a Message
@@ -36,7 +36,7 @@ The output of the `consume` operation will be `null` when no Message is present 
 
 == Filtering Incoming messages
 
-The JMS connector provides full support for filtering which Messages should be consumed based on the standar JMS `selector` language. 
+The JMS connector provides full support for filtering which Messages should be consumed based on the standar *JMS selector language*. 
 
 For example, if you have a priority Queue with Messages that need to be processed faster than the others, we can do:
 
@@ -49,7 +49,9 @@ When a selector is configured, only the Messages matching it will be received, i
 
 == Mime Types and Encoding
 
-The JMS Connector does its best to auto determine a Message’s mime type (`contentType`) based on the 'MM_MESSAGE_CONTENT_TYPE' property. However, there are cases in which that best guess is not enough, and you need first-hand knowledge of the Message’s content. In such cases, you can force that content type to a particular value by using the `contentType` parameter.
+The JMS Connector does its best to auto determine a Message’s mime type (`contentType`) based on the `MM_MESSAGE_CONTENT_TYPE` property. However, there are cases in which that best guess is not enough, and you need first-hand knowledge of the Message’s content. 
+
+In such cases, you can force that content type to a particular value by using the `contentType` parameter.
 
 The same process works for encoding. By default, the connector will assume that the runtime’s default encoding matches the one in the Message if no other information is provided. You can set this by using the `encoding` parameter.
 
@@ -75,6 +77,7 @@ For details on how to configure the Topic subscriptions go to link:jms-topic-sub
 == Incomming Message Metadata
 
 As stated before, each Message received will consist of two parts:
+
 * The payload, containing the content of the Message
 * The attributes, containing metadata regarding the Message
 
