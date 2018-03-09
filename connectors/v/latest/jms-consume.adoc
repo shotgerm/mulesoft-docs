@@ -1,4 +1,4 @@
-=How To Consume JMS Messages
+= How To Consume JMS Messages
 :keywords: jms, connector, consume, message
 :toc:
 :toc-title:
@@ -67,7 +67,7 @@ The syntax for consuming messages from a Topic is:
 </jms:consume>
 ----
 
-All the 'consume' operation parameters remain the same, but now you can handle the subscription configuration in the 'topic-consumer' parameter.
+All the `consume` operation parameters remain the same, but now you can handle the subscription configuration in the `topic-consumer` parameter.
 
 For details on how to configure the Topic subscriptions go to link:jms-topic-subscription[Using Topic Subscriptions].
 
