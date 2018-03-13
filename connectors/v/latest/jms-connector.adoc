@@ -246,5 +246,6 @@ A common use case for this would be using the JMS 2.0 spec, thus you need a gene
 * link:jms-publish-consume[How To Listen For A Reply]
 * link:jms-ack[Handling Message Acknowledgement]
 * link:jms-transactions[Handling Transactions in JMS]
+* link:jms-performance[JMS Tuning For Performance]
 * link:jms-documentation[JMS Connector Technical Reference]
 * link:external-libraries[Adding External Libraries]
