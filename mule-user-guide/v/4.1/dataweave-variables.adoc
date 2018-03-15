@@ -92,14 +92,14 @@ var msg = "hello"
 
 fun msg2(optParm = "ignore") = "hello"
 
-fun toUpper(aString) = upper(aString)
+fun toTitle(text: String) = toUpper(text[0]) ++ toLower(text[1 to -1])
 
 fun combined(function, msg="universe") = function(msg ++ " world")
 ---
 [
    msg: msg,
    msg2: msg2(),
-   toUpper: toUpper(msg),
+   toUpper: toTitle(msg),
    combined: combined(toUpper, msg),
    combined2: combined((x) -> lower(x) ++ " today", msg)
 ]
