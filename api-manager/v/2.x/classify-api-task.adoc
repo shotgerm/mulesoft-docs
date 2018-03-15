@@ -1,10 +1,10 @@
 = To Classify an API
 
-When you upgrade from the API Manager 1.x to API Manager 2.x, APIs are unclassified. Unclassified APIs reside in the unclassified environment. You need to classify any unclassified APIs to govern or otherwise manage the APIs as described in this procedure.
+When you upgrade from the API Manager 1.x to API Manager 2.x, APIs are unclassified. Unclassified APIs reside in the unclassified environment. You need to classify any unclassified APIs as described in this procedure to govern or otherwise manage the APIs.
 
 No downtime occurs when you classify an API if you use organization client credentials in the Mule wrapper.conf file or CloudHub property settings.
 
-Prior to November 2017, in a hybrid server or CloudHub, API Manager tracked APIs using organization credentials. For tighter security, you can choose to track APIs using environment credentials in API Manager 2.x or you can continue to use organization credentials after classification of APIs. MuleSoft recommends using environment credentials after you classify all your APIs as described in this procedure.
+Prior to November 2017, in a hybrid server or CloudHub, API Manager tracked APIs using organization credentials. For tighter security, you can choose to track APIs using environment credentials in API Manager 2.x or you can continue to use organization credentials after classification of APIs. MuleSoft recommends using environment credentials after you classify all your APIs.
 
 Disclaimer: If you’re using *master organization client credentials* to track all the APIs in the master organization as well as any business group, continue to use organization credentials. Do _not_ switch to environment credentials; otherwise, API Manager _will not_ track your APIs.
 

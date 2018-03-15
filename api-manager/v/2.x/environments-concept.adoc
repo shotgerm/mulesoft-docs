@@ -38,7 +38,7 @@ For example, you can have a parent business group(BG) for ABC Corp, and that par
 
 If you upgraded APIs from the earlier versions of API Manager to API Manager 2.x, you might have APIs residing in the Unclassified environment. Other APIs that you haven't associated with an environment, such as an API you create in Design Center, published to Exchange, and set up to manage from Exchange also appear unclassified in API Manager. 
 
-You need to classify an API to manage it. No downtime occurs when you classify an API if you use organization client credentials in the Mule wrapper.conf file or CloudHub property settings.
+You need to classify an API to manage it. No downtime occurs when you classify an API if you use organization client credentials in the Mule wrapper.conf file or CloudHub property settings. Follow instructions in the topic to classify an API linked below.
 
 Until you classify the API, the user permissions under the earlier release apply to all operations. After classification, the permissions per environment that you grant to users applies.
 
