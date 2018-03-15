@@ -6,7 +6,7 @@ No downtime occurs when you classify an API if you use organization client crede
 
 Prior to November 2017, in a hybrid server or CloudHub, API Manager tracked APIs using organization credentials. For tighter security, you can choose to track APIs using environment credentials in API Manager 2.x or you can continue to use organization credentials after classification of APIs. MuleSoft recommends using environment credentials after you classify all your APIs.
 
-Disclaimer: If you’re using *master organization client credentials* to track all the APIs in the master organization as well as any business group, continue to use organization credentials. Do _not_ switch to environment credentials; otherwise, API Manager _will not_ track your APIs.
+Disclaimer: If you’re using master organization client credentials to track all the APIs in the master organization as well as any business group, continue to use organization credentials. Do _not_ switch to environment credentials; otherwise, API Manager _will not_ track your APIs.
 
 ////
 If the API is not running, follow the single-step classification process in this procedure. If the API is running, follow the two-step classification process.
