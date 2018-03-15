@@ -8,6 +8,11 @@ Prior to November 2017, in a hybrid server or CloudHub, API Manager tracked APIs
 
 Disclaimer: If you’re using *master organization client credentials* to track all the APIs in the master organization as well as any business group, continue to use organization credentials. Do _not_ switch to environment credentials; otherwise, API Manager _will not_ track your APIs.
 
+////
+If the API is not running, follow the single-step classification process in this procedure. If the API is running, follow the two-step classification process.
+
+== Single-Step Classification Process
+////
 
 . In API Manager, click the environment control, labeled SANDBOX, in this example:
 +
@@ -38,7 +43,7 @@ A classification suggestion appears in the API list.
 ////
 
 two-step classification is no longer necessary. see docs-1984. kris 3/6/2018, 3/15/2018--exhume 2-step classification
-////
+
 
 == Two-step Classification
 
@@ -140,3 +145,4 @@ Perform these steps to prepare Mule Runtime to use API environments without upda
 After updating the server, when the application is up and running again,
 a classification suggestion appears in the API list. Click the suggestion and follow the instructions.
 
+////
