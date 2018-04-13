@@ -107,20 +107,20 @@ image:deploying-to-pcf-properties.png[]
 
 ==== Overriding Properties
 
-Just like with CloudHub and on-premise Mule runtime deployments, applications that you deploy to PCF can still bundle their own property placeholder or secure property placeholder files inside the deployable archive file. Mule substitutes these properties into the application when the application starts.
+Just like with CloudHub and on-premise Mule runtime deployments, applications that you deploy to PCF can still bundle their own configuration property or secure configuration properties files inside the deployable archive file. Mule substitutes these properties into the application when the application starts.
 
 
-If you have any property names set in a mule-app.properties file inside your application or in bundled property placeholder files, then when your application is deployed, any entries in the Properties tab with the same name will override the matching value bundled with the application.
+If you have any property names set in a mule-app.properties file inside your application or in bundled configuration properties files, then when your application is deployed, any entries in the Properties tab with the same name will override the matching value bundled with the application.
 
 ////
 [Note]
-It is possible to change the behavior of the application to not allow CloudHub properties to override properties bundled with the deployable archive. You do this by changing options in the Property Placeholder element in the Mule application. See link:http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html[Spring documentation on Property Placeholder options] for more information on non-default property placeholder options.
+It is possible to change the behavior of the application to not allow CloudHub properties to override properties bundled with the deployable archive. You do this by changing options in the Configuration Property element in the Mule application. See link:/mule-user-guide/v/4.1/configuring-properties[Documentation on Configuration Property] for more information on non-default configuration property options.
 ////
 
 ////
 ==== Overriding Secure Properties
 
-Note that you can flag application properties as secure so that their values are not visible to users at runtime or passed between the server and the console. You can also include an 'applications.properties' file in your application bundle, which can include properties that are marked as secure, and they will be automatically treated as such. These properties can also be overriden by new values you can set via the Runtime Manager console at runtime. See link:/runtime-manager/secure-application-properties[Secure Application Properties] for more information.
+Note that you can flag application properties as secure so that their values are not visible to users at runtime or passed between the server and the console. You can also include an 'application.yaml' or applications.properties' file in your application bundle, which can include properties that are marked as secure, and they will be automatically treated as such. These properties can also be overriden by new values you can set via the Runtime Manager console at runtime. See link:/runtime-manager/secure-application-properties[Secure Application Properties] for more information.
 ////
 
 
