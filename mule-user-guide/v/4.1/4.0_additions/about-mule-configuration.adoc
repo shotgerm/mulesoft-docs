@@ -64,7 +64,7 @@ Other, more advanced things you may configure at this level:
 
 * link:/mule-user-guide/v/3.9/transaction-management[Transaction Management] - Mule transactions are configured on inbound endpoints, where an endpoint can be configured to start a new transaction or join an existing one.
 
-* link:/mule-user-guide/v/3.9/configuring-properties[Properties] - Property placeholders, message properties, and system properties.
+* link:/mule-user-guide/v/4.1/configuring-properties[Properties] - Configuration Properties, message properties, and system properties.
 
 == Global Configuration Settings
 

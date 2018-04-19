@@ -123,7 +123,7 @@ The Mule facility for parsing configurations embeds Spring, so that a Mule confi
 
 * create Spring Beans, 
 * configure lists and maps, 
-* define property placeholders, and so on. 
+* define configuration properties, and so on. 
 
 We look at Spring in more detail in the following sections. Note that, as always, it is necessary to reference the proper schemas.
 
@@ -178,21 +178,17 @@ The syntax for creating custom components is a bit different, to allow more cont
 </component>
 ----
 
-=== Property Placeholders
+=== Configuration Properties
 
-Mule configurations can contain references to property placeholders, to allow referencing values specified outside the configuration file. One important use case for this is usernames and passwords, which should be specified in a more secure fashion. The syntax for property placeholders is simple: `${name}`, where `name` is a property in a standard Java property file.
+Mule configurations can contain references to configuration properties, to allow referencing values specified outside the configuration file. One important use case for this is usernames and passwords, which should be specified in a more secure fashion. The syntax for configuration properties is simple: `${name}`, where `name` is a property in a standard Java property file.
 
-Here is an example of a configuration that uses property placeholders, together with the properties it references:
+Here is an example of a configuration that uses configuration properties, together with the properties it references:
 
 Configuration:
 
 [source,xml, linenums]
 ----
-<spring:beans>
-  <context:property-placeholder
-           location="classpath:my-mule-app.properties,
-                     classpath:my-mule-app-override.properties" />
-</spring:beans>
+<configuration-properties file="my-mule-app.yaml"/>
  
 <http:endpoint name="ProtectedWebResource"
                user="${web.rsc.user}"
@@ -206,12 +202,14 @@ Properties file:
 
 [source, code, linenums]
 ----
-web.rsc.user=alice
-web.rsc.password=s3cr3t
-web.rsc.host=www.acme.com
+web:
+	rsc:
+		user: "alice"
+		password: "s3cr3t"
+		host: "www.acme.com"
 ----
 
-Note the the location given for the file is a location in the classpath. Another alternative would be a URL, for instance `+file:///etc/mule/conf/my-mule-app-override.properties+`. As shown above, it is also possible to specify a list of properties files, comma-separated.
+Note the the location given for the file is a location in the classpath. Another alternative would be a URL, for instance `+file:///etc/mule/conf/my-mule-app-override.yaml+`, or an absolute path. 
 
 == About Mule Configuration
 
