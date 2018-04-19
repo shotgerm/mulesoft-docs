@@ -207,12 +207,12 @@ The easiest way to load properties on applications deployed to CloudHub is to us
 
 Just like with on-premises Mule runtime deployments, you could instead add a `mule-app.properties` file inside the deployable application archive file. CloudHub then loads these properties into the application when the application starts.
 
-On CloudHub, it's not recommended to configure an external location to add configuration property.
+On CloudHub, it's not recommended to configure an external location to add property placeholders.
 
 When your application is deployed, entries in the CloudHub *Properties* tab override any other property with the same name that you may have defined in the bundled files within the application.
 
 [NOTE]
-It is possible to change the behavior of the application to not allow CloudHub properties to override properties bundled with the deployable archive. You do this by changing options in the Configuration Property element in the Mule application. See link:/mule-user-guide/v/4.1/configuring-properties[Documentation on Configuration Property] for more information on non-default configuration property options.
+It is possible to change the behavior of the application to not allow CloudHub properties to override properties bundled with the deployable archive. You do this by changing options in the Property Placeholder element in the Mule application. See link:http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html[Spring documentation on Property Placeholder options] for more information on non-default property placeholder options.
 
 Note that you can flag application properties as secure so that their values are not visible to users at runtime or passed between the server and the console. See link:/runtime-manager/secure-application-properties[Secure Application Properties] for more information.
 
@@ -226,7 +226,7 @@ With an on-premises Mule runtime you can add properties in several ways. The mos
 
 Otherwise, there are several ways you can override the property values in this file bundled inside the application.
 
-. You can configure an external location to add configuration property or secure configuration property files to override properties.
+. You can configure an external location to add property placeholders or secure property placeholder files to override properties.
 
 . You can set Java system environment variables at deployment time to override properties.
 
