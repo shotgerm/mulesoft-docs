@@ -16,7 +16,7 @@ The values for these placeholders can be made available in a variety of ways, as
 
 == Global Properties
 
-You can use the `<global-property>` element to set a placeholder value from within your Mule configuration, such as from within another Mule configuration file. Do not use the global property syntax to reference the values from a `.yaml` or `.properties` file. To reference properties from a file, read the section on properties files.
+You can use the `<global-property>` element to set a placeholder value from within your Mule configuration, such as from within another Mule configuration file. You can use the global property syntax to reference the values from a `.yaml` or `.properties` file, and create new (global) properties that depends on configuration properties, or secure configuration properties. To reference configuration properties, read the section on properties files.
 
 [source,xml, linenums]
 ----
@@ -25,13 +25,6 @@ You can use the `<global-property>` element to set a placeholder value from with
 ----
 
 == Properties Files
-
-[WARNING]
-====
-If you deploy multiple applications through a link:/mule-user-guide/v/4.1/shared-resources[Shared Resources] structure, don't set anything in the properties files, as there might potentially be conflicts between the various apps that share a domain. Instead, set environment variables over the scope of the deployed app, its domain, and other apps under that domain.
-
-As explained in link:/mule-user-guide/v/4.1/shared-resources[Shared Resources], in Studio you can create these variables through the *Environment tab* of the *Run Configurations menu*, reachable via the drop-down menu next to the Play button.
-====
 
 In Anypoint Studio, you can add properties to the default properties file in your project's folders.
 
@@ -155,8 +148,6 @@ image:Environment+Tab2.png[Environment+Tab2]
 == Setting Properties Values in Runtime Manager
 
 If you deploy your application to link:/runtime-manager/[Runtime Manager], you can also set properties through the Runtime Manager console. These can be defined when link:/runtime-manager/deploying-to-cloudhub[Deploying to CloudHub], or on an link:/runtime-manager/managing-applications-on-cloudhub[already running application].
-
-*Note:* If you also have the same variables set in the `mule-app.yaml` file inside your application, the environment variables you set here in the console always override the values in 'mule-app.yaml' when your application deploys.
 
 To create an environment variable or application property:
 
