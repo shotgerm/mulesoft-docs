@@ -8,10 +8,7 @@ image:logo-pcf-disabled.png[link="/runtime-manager/deployment-strategies", title
 
 CloudHub supports *safely hidden application properties*, where the name of a property is visible in the console, but the value is not displayed or retrievable by any user. CloudHub resolves the property at runtime without exposing the sensitive information. 
 
-[NOTE] 
-====
 Internally, safely hidden application properties are encrypted and stored in a MuleSoft managed CloudHub properties database, which is encrypted per user organization. 
-====
 
 Safely hidden application properties are a feature that is currently only available for setting via the Runtime Manager UI for applications deployed to CloudHub workers. For applications that you deploy through any other link:/runtime-manager/deployment-strategies[deployment strategy], you need to use secure property placeholder files bundled with your application zip file.
 
